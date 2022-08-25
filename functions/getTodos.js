@@ -1,39 +1,20 @@
-const axios = require("axios")
-require("dotenv").config()
+const { GET_TODOS } = require("./utils/todoQueries.js")
+const sendQuery = require("./utils/sendQuery")
 
 // Handler
 exports.handler = async event => {
-  // Get Todos
-
-  // Query
-  const GET_TODOS = `
-    query{
-        allTodos{
-            data{
-                _id
-                text 
-            }
+    try {
+        const res = await sendQuery(GET_TODOS)
+        const data = res.allTodos.data
+        return {
+            statusCode: 200,
+            body: JSON.stringify(data),
+          }
+        } catch (err) {
+          console.error(err)
+          return {
+            statusCode: 500,
+            body: JSON.stringify({ err: "Something went wrong" }),
+          }
         }
-    }`
-
-  // Request
-  const { data } = await axios({
-    url: "https://graphql.fauna.com/graphql",
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${process.env.FAUNA_SECRET_KEY}`,
-    },
-    data: {
-      query: GET_TODOS,
-      variables: {},
-    },
-  })
-
-  console.log(data)
-
-  return {
-    statusCode: 200,
-    body: JSON.stringify(data),
-  }
-  // Request //
-}
+    }
