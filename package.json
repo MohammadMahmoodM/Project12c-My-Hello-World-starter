@@ -22,13 +22,16 @@
   },
   "devDependencies": {
     "prettier": "^2.7.1",
+    "autoprefixer": "^10.3.1",
+    "gatsby-plugin-postcss": "^4.10.0",
+    "postcss": "^8.3.6",
     "tailwindcss": "^3.1.8"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "https://github.com/mahmoodlegend/Project12c-My-Hello-World-starter"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/mahmoodlegend/Project12c-My-Hello-World-starter/issues"
   }
 }

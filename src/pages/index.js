@@ -1,10 +1,7 @@
 import React from "react"
 
-// Styles
-import "./../styles/allStyles.css"
-
 // Components
-import Todolist from "./../components/Todolist"
+import Todolist from "./../component/Todolist"
 
 // Index
 export default function Home() {

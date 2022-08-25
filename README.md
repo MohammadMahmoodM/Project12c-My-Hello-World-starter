@@ -1,3 +1,10 @@
 # JAMStack Todo List
 
-## Tech Stack
+## Mahmood
+
+- GatsbyJs
+- FaunaDB
+- Netlify Serverless Functions
+- Tailwindcss
+- Postcss
+- GraphQl
