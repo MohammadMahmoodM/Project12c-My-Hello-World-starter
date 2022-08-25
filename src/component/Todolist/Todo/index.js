@@ -84,39 +84,28 @@ const Todo = ({ task, refreshTodos }) => {
   // Return
   return (
     <div className="flex flex-col">
-      <div className="-my-2 flex align-center sm:-mx-6 lg:-mx-8 ">
-        <div className="py-2 align-middle inline-block lg:w-2/3 mx-auto  w-full sm:px-6 lg:px-8">
-          <div className="shadow overflow-hidden  border-b border-gray-200 sm:rounded-lg">
-            <div className="min-w-5/6  divide-y divide-gray-200">
-              <div className="bg-white divide-y divide-gray-200">
-                {/* Container */}
-                <div className="px-2 min-w-full py-4 flex justify-between align-center ">
-                  {/* Input */}
-                  {/* <div className="flex-row min-w-1/3 w-1/3 border-2 border-black inline-block items-center"> */}
-                  {/* <div className="ml-4 font-medium text-lg "></div> */}
-                  {/* </div> */}
-                  {todoText}
-                  {/* Buttons */}
-                  <div className="inline-block flex justify-end items-center min-w-48 w-36 ">
+      <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+        <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+          <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+            <table className="min-w-full divide-y divide-gray-200">
+              <tbody className="bg-white divide-y divide-gray-200">
+                <tr>
+                  <td className="px-2 py-4 whitespace-nowrap">
+                    <div className="flex items-center">
+                    <div className="ml-4">{todoText}</div>
+                    </div>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap flex items-center justify-end text-right text-sm font-medium">
                     {editButton}
                     <a onClick={deleteTodo}
-                      className="text-indigo-600 p-2 hover:text-indigo-900 ml-2 cursor-pointer"
+                      className="text-indigo-600 text-base p-2 hover:text-indigo-900 ml-4 cursor-pointer"
                     >
-                      <img
-                        src={deleteIcon}
-                        alt="delete"
-                        className="min-w-5 h-5 inline"
-                      />
+                      Delete
                     </a>
-
-                    </div>
-
-                  {/* <div className="px-3 min-w-1/3 inline-block border-2 border-green-800 py-4  flex items-center justify-end text-right text-sm font-medium">
-                   
-                  </div> */}
-                </div>
-              </div>
-            </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
