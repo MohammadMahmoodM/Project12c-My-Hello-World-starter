@@ -22,6 +22,7 @@ const TodoInput = () => {
       setSubmitting(false)
       // Post Data
       // fetch(`/.netlify/functions/add_message`, {
+      // fetch(`/.netlify/functions/todo-list`, {
       //   method: "POST",
       //   body: JSON.stringify(values),
       // })
