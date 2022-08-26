@@ -1,7 +1,7 @@
-/** @type {import('tailwindcss').Config} */
+
 module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}"],
-  content: [],
+  darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},
     height: {
@@ -16,6 +16,9 @@ module.exports = {
       "90v": "90vh",
       "100v": "100vh",
     },
+  },
+  variants: {
+    extend: {},
   },
   plugins: [],
 }
