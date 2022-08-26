@@ -22,7 +22,7 @@ const TodoInput = ({ refreshTodos }) => {
         const text = values.task
 
         // Post Data
-        fetch(`/api/createTodo`, {
+        fetch(`/.netlify/functions/createTodo`, {
           method: "POST",
           body: JSON.stringify({ text }),
         })

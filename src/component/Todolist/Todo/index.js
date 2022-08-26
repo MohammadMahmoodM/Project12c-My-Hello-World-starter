@@ -33,7 +33,7 @@ const Todo = ({ task, refreshTodos, loading }) => {
   const updateTodo = async () => {
     try {
       setUpdating(true)
-      await fetch("/api/updateTodo", {
+      await fetch("/.netlify/functions/updateTodo", {
         method: "PUT",
         body: JSON.stringify(taskToUpdate),
       })
@@ -46,7 +46,7 @@ const Todo = ({ task, refreshTodos, loading }) => {
   const deleteTodo = async () => {
     const id = task._id
     try {
-      await fetch("/api/deleteTodo", {
+      await fetch("/.netlify/functions/deleteTodo", {
         method: "DELETE",
         body: JSON.stringify({ id }),
       })
