@@ -1,7 +1,7 @@
 {
   "name": "hamstack-faunadb-netlify-todo-app",
   "private": true,
-  "description": "A Todo List Application",
+  "description": "this is a jamstack todo list application",
   "version": "0.1.0",
   "license": "0BSD",
   "scripts": {

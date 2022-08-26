@@ -54,7 +54,7 @@ const TodoInput = ({ refreshTodos }) => {
         >
           <input
            // className="shadow appearance-none border rounded w-3/4 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            className="shadow appearance-none border rounded  w-3/4 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+           className="shadow appearance-none border rounded w-2/3  md:w-4/5 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="task"
             type="text"
             name="task"
@@ -67,14 +67,18 @@ const TodoInput = ({ refreshTodos }) => {
 
           <button
             //className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-            className="bg-blue-500 md:w-1/5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="bg-blue-500 w-1/3 md:w-1/5 hover:bg-blue-700 text-white font-bold py-2 px-2 md:px-4 rounded focus:outline-none focus:shadow-outline"
             type="submit"
             disabled={isSubmitting}
           >
             {isSubmitting && (
               <FontAwesomeIcon className="mr-2" icon={faSpinner} spin />
             )}
-            {isSubmitting ? "Adding.." : "Add"}
+            {isSubmitting ? (
+              <span className="hidden md:inline">Adding..</span>
+            ) : (
+              <span>Add</span>
+            )}
           </button>
         </form>
       )}
